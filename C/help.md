@@ -99,3 +99,8 @@ printf("\n Endereco do ponteiro: %p", &ponteiro_para_ano);
 
 O nome de um vetor nada mais é do que um ponteiro para o endereço de memória do seu primeiro elemento.
 Podemos acessar o `primeiro valor` de um vetor tanto com `num[0]` ou `*num`.
+
+
+## Operações
+
+Quando fazemos operações boleanas os resultados são em 0 e 1, sendo respectivos, falso e verdadeiro.
