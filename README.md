@@ -3,7 +3,7 @@ no hora de imprimir uma variável.
 
 Atribuindo valor a uma variável em C:
 
-```c
+```C++
 scanf("%d", &x);
 ```
 
@@ -33,19 +33,25 @@ O tamanho de uma strin ser baseado sempre na quantidade de caractéres + 1. Já 
 
 Atribuindo valores em uma string:
 
-    char nome[16] = {'J','o','a','o'}; // Como em um array normal.
-    char sobrenome[31] = "Alberto Gomes"; // Aspas duplas.
+```C++
+char nome[16] = {'J','o','a','o'}; // Como em um array normal.
+char sobrenome[31] = "Alberto Gomes"; // Aspas duplas.
+```
 
 `%s` é utilizado para indicar uma string.
 
+```C++
     printf("\n Nome digitado: %s", nome); // Não há a necessidade de utilizar o '&'.
+```
 
 A função `scanf()` só consegue capturar palavras simples, pois a mesma interrompe a atribuição quando encontra um espaço.
 Para contornar isso, utilizamos a `fgets()` da biblioteca `<stdio.h>`.
 
-    // fgets(nome_string,tamanho_string, entrada);
-    fflush(stdin); // Limpa a entrada.
-    fgets(frase, 101, stdin);
+```C++
+// fgets(nome_string,tamanho_string, entrada);
+fflush(stdin); // Limpa a entrada.
+fgets(frase, 101, stdin);
+```
 
 Criação de matriz em C:
 
@@ -55,51 +61,59 @@ Criação de matriz em C:
 
 Para criar variaveis com tipos diferentes de dados (estruturas), utilizamos o `struct`, que funcionam como um tipo de dado. Devem ser declarados antes do `main()`.
 
-```c
-// dessa forma criamos um tipo com o nome colocado em <nome>
-struct <nome>{
-    <tipo> <nome_da_variavel1>;
-    <tipo> <nome_da_variavel2>;
-};
-```
+    // dessa forma criamos um tipo com o nome colocado em <nome>
+    struct <nome>{
+        <tipo> <nome_da_variavel1>;
+        <tipo> <nome_da_variavel2>;
+    };
 
 ## Ponteiros
 
 Variáveis de tipo `ponteiro` são utilziadas exclusivamente para armazenar endereços de memória. Criação:
 
-```c
+```C++
 // <tipo> *<nome_do_ponteiro>;
 int *idade; // O tipo do ponteiro indica o tipo de endereço apontado.
 ```
 
 Outro exemplo:
 
-```c
+```C++
 int ano = 2018;
 int *ponteiro_para_ano = &ano; // O '&' aponta para o endeço do inteiro ano.
 ```
 
 Para imprimir valor de um ponteiro (endereço de memória)
 
-```c
+```C++
 printf("\n Conteúdo do ponteiro: %p", ponteiro_para_ano); // %p imprime o valor contido no ponteiro (endereço hexadecimal).
 ```
 
 Para acessar o conteúdo da variável que o ponteiro aponta:
 
-```c
+```C++
 printf("\n Conteúdo da variável pelo ponteiro: %d", *ponteiro_para_ano); // É colocado um * na frente do nome do ponteiro.
 ```
 
 Imprimindo o endereço do ponteiro na memória:
 
-```c
+```C++
 printf("\n Endereco do ponteiro: %p", &ponteiro_para_ano);
 ```
 
 O nome de um vetor nada mais é do que um ponteiro para o endereço de memória do seu primeiro elemento.
 Podemos acessar o `primeiro valor` de um vetor tanto com `num[0]` ou `*num`.
 
+Utilizamos o `*` quando vamos criar um ponteiro e `&` para acessar o endereço de memória.
+
+```C++
+int *alocar()
+{
+    // O * na frente do nome da variável indica que se trata de endereço de memória.
+    int *memoria = (int *)malloc(sizeof(int));
+    return memoria;
+}
+```
 
 ## Operações
 
