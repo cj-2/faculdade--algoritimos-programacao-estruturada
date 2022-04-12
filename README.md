@@ -118,3 +118,9 @@ int *alocar()
 ## Operações
 
 Quando fazemos operações boleanas os resultados são em 0 e 1, sendo respectivos, falso e verdadeiro.
+
+
+## Funções Recursivas
+
+Toda função recursiva necessita de um critério de parada. A instancia que atender
+a esse critério é chamada de caso base.
