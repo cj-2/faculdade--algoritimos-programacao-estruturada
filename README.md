@@ -124,3 +124,7 @@ Quando fazemos operações boleanas os resultados são em 0 e 1, sendo respectiv
 
 Toda função recursiva necessita de um critério de parada. A instancia que atender
 a esse critério é chamada de caso base.
+
+## Listas
+
+Uma `lista simplesmente` ligada tem esse nome porque cada nó da estrutura tem apenas um ponteiro para o próximo nó da lista. 
