@@ -127,4 +127,7 @@ a esse critério é chamada de caso base.
 
 ## Listas
 
-Uma `lista simplesmente` ligada tem esse nome porque cada nó da estrutura tem apenas um ponteiro para o próximo nó da lista. 
+Uma `lista simplesmente ligada` tem esse nome porque cada nó da estrutura tem apenas um ponteiro para o próximo nó da lista.
+
+Quando estamos acessando uma propriedade de uma struct diretamente utilizamos o `.`, ex: `carro.cor`,
+porém, quando se trata de ponteiros, utilizamos o `-> `, ex: `carro->cor`.
